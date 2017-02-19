@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="js/fancybox2/lib/jquery-1.10.2.min.js"></script>
+<link rel="stylesheet" href="css/stylesheet.css">
+<link rel="stylesheet" href="css/fixed-navigation-bar-master/fixed-navigation-bar.css">
+<link rel="stylesheet" href="css/fixed-navigation-bar-master/base.css">
+
+<style type="text/css">
+#page3 {
+	background-image: url(images/fsbg/fsbg-2-compressed.jpg);
+	background-size: 100% 100%;
+	width: 100%;
+	height: 1500px;
+	min-width: 800px;
+	min-height: 0px;
+	z-index: -100;
+}
+#page4 {
+	background-image: url(images/fsbg/fsbg-1-compressed.jpg);
+	background-size: 100% 100%;
+	width: 100%;
+	height: 475px;
+	min-width: 800px;
+	min-height: 0px;
+	z-index: -100;
+}
+#container1 {
+	height: 325px;
+	width: 245px;
+	background-color: #FFFFFF;
+	float: left;
+	margin-top: 10px;
+	margin-left: 150px;
+	padding-left: 5px;
+	padding-right: 5px
+	}
+#container2 {
+	height: 325px;
+	width: 245px;
+	background-color: #FFFFFF;
+	float: left;
+	margin-top: 10px;
+	margin-left: 100px;
+	padding-left: 5px;
+	padding-right: 5px	
+	}
+#container3 {
+	height: 325px;
+	width: 245px;
+	background-color: #FFFFFF;
+	float: left;
+	margin-top: 10px;
+	margin-left: 100px;
+	padding-left: 5px;
+	padding-right: 5px
+	}
+#container4 {
+	height: 325px;
+	width: 245px;
+	background-color: #FFFFFF;
+	margin-top: 20px;
+	margin-left: 140px;
+	padding-left: 5px;
+	padding-right: 5px	
+	}
+.line {
+	float: right;
+	height: 3px;
+	width: 900px;
+	background-color: #FFFFFF;
+	margin-right: 30px;
+	margin-top: 50px
+	}
+.twitter-timeline {
+	margin-left: 265px
+	}
+</style>
+
+<meta charset="UTF-8">
+<title>Longform Demo | Work in Progress</title>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+	
+$(window).scroll(function () {
+            if ($(window).scrollTop() > 226) {
+                $(".header").addClass("fixed");
+            } else {
+                $(".header").removeClass("fixed");
+            }
+        });
+	
+
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('images/icons/logo-rollover-compressed.png')">
+<!-- Start Div 1 -->
+<div id="page3">
+<a id="landing" class="smooth"></a>
+<!-- Start Navigation Bar -->
+<nav class="fixed-nav-bar">
+  <div id="menu" class="menu">
+<a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Logo','','images/icons/logo-rollover-compressed.png',1)"><img src="images/icons/logo-compressed.png" alt="" width="40" height="40" id="Logo"></a>
+<ul class="menu-items">
+<li><a href="about.html">About</a></li>
+      <li><a href="youth.html">Youth</a></li>
+      <li><a href="health.html">Health</a></li>
+      <li><a href="budget.html">Budget</a></li>
+      <li><a href="style.html">Style</a></li>
+      <li><a href="tech.html">Tech</a></li>
+      <li><a href="contact.html">Contact</a></li>
+</ul>
+  </div>
+</nav>
+<div class="space" style="height: 125px"></div>
+<img src="images/header/headline.png" width="900px" height="200px" style="margin-left: 60px">
+<img src="asset/images/city_1.jpg" width="600px" height="400px" style="margin-left: 60px; float: left">
+	<a class="twitter-timeline" data-lang="en" data-width="300" data-height="400" href="https://twitter.com/workinprogteens">Tweets by workinprogteens</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<h6 style="color: #FFFFFF; margin-left: 60px">Hello, I am a caption.</h6>
+	<h6 style="color: #FFFFFF; margin-left: 60px; font-size: 18px">By <strong>Eunice Yeo and Kevin Ravendran</strong></h6>	
+	</div>
+<!-- End Div 1-->
+<!-- Start Div 2 (Recommended)-->
+<div id="page4">
+<img src="images/section.png" width="290px" height="100px" style="margin-left: 30px">
+<div class="line"></div>
+<div id="container1"></div>
+<div id="container2"></div>
+<div id="container3"></div>
+</div>
+<a href="#landing"><img src="images/icons/back-to-top_2-compressed.png" height="70" width="70" style="float:right; margin-top: -75px; cursor: pointer"></a>
+<div class="space2"></div>
+<!-- End Div 2 (Recommended)-->
+<!-- Start Footer -->
+<div id="footer">
+	<a href="https://twitter.com/workinprogteens" target="_blank"> <img src="images/icons/twitter.png" height="25px" style="margin-top: 10px; margin-left: 575px"></a>
+	
+	<a href="https://instagram.com/workinprogressmag/" target="_blank"> <img src="images/icons/instagram.png" height="25px" style="margin-left: 3px"></a>
+	
+	<a href="https://ask.fm/WorkinProgressTeens" target="_blank"> <img src="images/icons/Ask.fm-logo_compressed.png" height="25px" style="margin-left: 3px"></a>
+	
+	<a href="mailto:workinprogress@gmail.com" target="_blank"> <img src="images/icons/email.png" height="25px" style="margin-left: 3px"></a>
+</div>
+<!-- End Footer -->
+</body>
+</html>
